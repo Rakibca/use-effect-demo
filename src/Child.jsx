@@ -8,6 +8,10 @@ export function Child() {
     console.log("Re-Render");
   });
 
+  useEffect(() => {
+    console.log("Hi");
+  }, []);
+
   return (
     <div>
       <input
