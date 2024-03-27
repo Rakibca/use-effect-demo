@@ -12,6 +12,10 @@ export function Child() {
     console.log("Hi");
   }, []);
 
+  useEffect(() => {
+    console.log(`My name is ${name} and I am ${age} years old`);
+  }, [name, age]);
+
   return (
     <div>
       <input
