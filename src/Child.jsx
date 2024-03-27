@@ -10,15 +10,19 @@ export function Child() {
 
   useEffect(() => {
     console.log("Hi");
+
+    return () => {
+      console.log("Bye");
+    };
   }, []);
+
+  useEffect(() => {
+    console.log(`My name is ${name} and I am ${age} years old`);
+  }, [name, age]);
 
   useEffect(() => {
     document.title = name;
   }, [name]);
-
-  useEffect(() => {
-    console.log("Re-Render");
-  });
 
   return (
     <div>
